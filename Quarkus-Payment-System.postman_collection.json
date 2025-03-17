@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "de6d443b-a002-4993-91a0-9747df60743c",
+		"name": "Quarkus-Payment-System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21718638"
+	},
+	"item": [
+		{
+			"name": "All_Payment_Providers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/payment_providers",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_providers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment_Providers_Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/payment_providers/id/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_providers",
+						"id",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment_Providers_Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/payment_providers/country/USA",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_providers",
+						"country",
+						"USA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment_Providers_Industry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/payment_providers/industry/Bank",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_providers",
+						"industry",
+						"Bank"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment_Providers_Payment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/payment_providers/payment/Debit Card",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_providers",
+						"payment",
+						"Debit Card"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment_Provider_Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "country",
+							"value": "Itlay",
+							"type": "text"
+						},
+						{
+							"key": "industry",
+							"value": "Brokerage",
+							"type": "text"
+						},
+						{
+							"key": "payment",
+							"value": "Mortgage",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/payment_providers/registration",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_providers",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment_Provider_Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/payment_providers/delete/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_providers",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment_Provider_Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "localhost:8080/payment_providers/update/2?country=Italy&industry=Pawn Shop&payment=Lending",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_providers",
+						"update",
+						"2"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Italy"
+						},
+						{
+							"key": "industry",
+							"value": "Pawn Shop"
+						},
+						{
+							"key": "payment",
+							"value": "Lending"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment_Transactions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "provider_id",
+							"value": "4",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "50.00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/payment_transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_transactions"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All_Payment_Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/payment_transactions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"payment_transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
